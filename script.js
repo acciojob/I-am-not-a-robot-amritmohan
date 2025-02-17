@@ -1,5 +1,3 @@
-//your code here
-
 const imageUrls = [
             "https://picsum.photos/id/237/200/300",
             "https://picsum.photos/seed/picsum/200/300",
@@ -31,6 +29,7 @@ const imageUrls = [
             shuffledImages.forEach((src, index) => {
                 let img = document.createElement("img");
                 img.src = src;
+                img.classList.add(`img${index + 1}`);
                 img.setAttribute("data-index", index);
                 img.onclick = () => selectImage(img);
                 container.appendChild(img);
